@@ -26,36 +26,38 @@
             android:layout_marginStart="24dp"
             android:text="1"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="@+id/btnItemUpdate"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/btnItemUpdate" />
 
-        <TextView
+        <EditText
             android:id="@+id/textViewPlaceName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="8dp"
+
             android:text="Da lat"
-            android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textColor="@drawable/textview_selector"
+            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="@+id/textViewPlaceId"
             app:layout_constraintStart_toEndOf="@+id/textViewPlaceId"
-            app:layout_constraintTop_toTopOf="@+id/textViewPlaceId" />
+            app:layout_constraintTop_toTopOf="@+id/textViewPlaceId"
+            app:layout_constraintVertical_bias="0.619" />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/btnItemUpdate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginBottom="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btnItemDelete"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/_c" />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/btnItemDelete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -65,5 +67,6 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/_b" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

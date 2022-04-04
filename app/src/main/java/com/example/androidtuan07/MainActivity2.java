@@ -17,13 +17,18 @@ public class MainActivity2 extends AppCompatActivity {
     AdapterPalce adapter;
     TextView txt;
     Button btnSave,btnCan;
-    DatabasePlace db;
+
     int index = -1;
+
+    private static MainActivity2 instance;
+    private static DatabasePlace db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
+        instance = this;
 
         db  = new DatabasePlace(this);
 
@@ -52,7 +57,15 @@ public class MainActivity2 extends AppCompatActivity {
         });
     }
 
-    private void update() {
+    public static MainActivity2 getInstance(){
+        return instance;
+    }
+
+    public static DatabasePlace getDb() {
+        return db;
+    }
+
+    public void update() {
         list.clear();
         List<Place> temp = db.getAllPlace();
         for (Place n : temp){
